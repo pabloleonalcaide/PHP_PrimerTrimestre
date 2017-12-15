@@ -1,0 +1,43 @@
+body {
+    background-color: #383838;
+}
+div {
+  padding: 2px;
+  margin: 2px;
+  border-radius: 25px;
+  background-color: #252525;
+}
+footer {
+    clear:both;
+}
+.center{
+    text-align:center;
+}
+a{          text-decoration:none; }
+nav ul{
+    background-color: #212121;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align:center;
+}
+nav ul li{    display: inline;}
+ul li a{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    margin-left:2px;
+    text-decoration: none
+}
+ul li a:hover {
+    background-color: #111;
+    box-shadow: 5px 5px 2px #212121;
+}
+.error{    color: #FF0000;}
+.prueba{
+}
+.prueba:hover{
+    transform : scale(1.1);
+    transform:translate(2px,3px);
+}
