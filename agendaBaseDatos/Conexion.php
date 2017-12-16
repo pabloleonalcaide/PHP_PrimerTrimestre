@@ -11,7 +11,7 @@ class Conexion{
     public function __construct(){
         try{
             //establecemos la conexión
-            $this->conexion_db = new PDO('mysql:host=localhost; dbname=agenda','root','serotonina');
+            $this->conexion_db = new PDO('mysql:host=localhost; dbname=agenda','root','root');
             //atributos de conexion --> nos permite lanzar excepciones y reportar errores
             $this->conexion_db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             //especificamos que esta conexión usara caracteres latinos
