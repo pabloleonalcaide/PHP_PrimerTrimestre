@@ -4,6 +4,10 @@
 * Generacion de firmas
 */
 ob_start();
+session_start();
+if($_SESSION['perfil'] != 'administrador'){
+    header('Location: ../autentificacion/index.php');
+}
 include_once('../conexion/Usuarios.php');
 include_once('../conexion/Claves.php');
 $usuarios = new Usuarios();
@@ -12,11 +16,11 @@ $query = $usuarios->get_usuario();
 ob_end_flush();
 ?>
 <h2>Validación de Usuarios</h2>
-<?
+<?php
 
 if($_POST['buscar']){
     $input = trim($_POST['buscar']);
-    $filtro=$usuarios->buscarUsuario($input);
+    $filtro=$usuarios->get_usuarios($input);
     mostrarAgentes($filtro);
 }else{
     mostrarAgentes($query);

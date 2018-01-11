@@ -1,3 +1,13 @@
+<?php
+session_start();
+ob_start();
+
+if($_SESSION['perfil'] == 'administrador'){
+    header('Location: ../menuAdmin.php');
+}elseif ($_SESSION['perfil'] == 'usuario'){
+    header('Location: ../accesoUsuario.php');
+}
+?>
 <!-- Index del Login - Pablo Leon Alcaide -->
 
     <h1>Autentificación de Usuario</h1>
@@ -5,6 +15,7 @@
 
     <form action="./control.php" method="post">
         <?php
+
         if ($_GET['errorUsuario'] == 'yes') {
             echo '<span><b>Los datos no son correctos</b></span>';
         } else {
@@ -16,6 +27,8 @@
         <br><input type="submit" value="enviar">
     </form>
     <br><hr><b>Administrador: </b> usuario: admin || pass: admin
-    <br><hr><b>Pruebas: </b> usuario: pablo || pass: pablo
 <!-- Volver a la raiz -->
     <br /><a href="../leon_alcaide_pablo/index.php">Volver</a>
+<?php
+ob_end_flush();
+ ?>

@@ -58,7 +58,7 @@ class Usuarios extends conexion{
     public function buscarUsuario($pattern){
     $consulta = 'SELECT * FROM usuario WHERE usuario LIKE "'.$pattern.'%"';
     $sentencia = $this->conexion_db->prepare($consulta);
-    $sentencia->execute(array(':usuario'=>$pattern));
+    $sentencia->execute();
     $resultado = $sentencia->fetchAll(PDO::FETCH_ASSOC);
     $sentencia->closeCursor();
     return $resultado;

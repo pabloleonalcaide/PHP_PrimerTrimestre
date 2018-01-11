@@ -4,6 +4,10 @@
 * Validacion de usuarios por parte del administrador
 */
 ob_start();
+session_start();
+if($_SESSION['perfil'] != 'administrador'){
+    header('Location: ./autentificacion/index.php');
+}
 require('./conexion/Usuarios.php');
 $usuarios = new Usuarios();
 $query = $usuarios->get_novalidados();

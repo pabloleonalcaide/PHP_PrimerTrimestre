@@ -21,9 +21,9 @@ echo'<form action="./controlFirma.php" method="post">
 <br><hr><b>Pruebas: </b> número : 2017
 
 <!-- Volver a la raiz -->
-<br /><a href="../leon_alcaide_pablo/index.php">Volver</a>
+<br /><a href="../index.php">Volver</a>
 
-<?
+<?php
 /* Extrae un número aleatorio de la tabla */
 function generarNumero(){
     $valores = $claves->getNumero($id);

@@ -7,7 +7,11 @@
 * @author Pablo Leon Alcaide
 */
 ob_start();
+session_start();
 require_once ('../conexion/Usuarios.php');
+if(!$_SESSION['perfil']){
+    $_SESSION['perfil'] = 'anonimo';
+}
 
 $usuarios = new Usuarios();
 $query = $usuarios->get_usuario();
@@ -17,12 +21,13 @@ $perfil ="anonimo";
 
 if($user == 'admin' && $pass = 'admin'){
     $perfil='administrador';
-
+    $_SESSION['perfil'] = 'administrador';
 }else{
     foreach($query as $row){
         if($row['usuario'] == $user && $row['password']== $pass && $row['estado']=='activo'){
             $_SESSION['idUsuario']= $row['id'];
             $perfil='usuario';
+            $_SESSION['perfil'] = 'usuario';
        }
     }
 }

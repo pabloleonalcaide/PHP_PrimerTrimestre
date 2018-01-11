@@ -32,7 +32,7 @@ echo '<form action="'.htmlspecialchars($_SERVER["PHP_SELF"]).'" method="post">';
         </fieldset><span><? echo $errorMsg ?></span>
     </form>
 
-<?
+<?php
 //Cuando pulse para validar agente
     if(isset($_POST['validar'])){
         $user = limpiar($_POST['usuario']);
