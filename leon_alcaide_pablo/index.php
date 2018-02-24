@@ -1,5 +1,4 @@
 <?php
-
 /**
 * El index lanza automaticamente a la autentificación del usuario
 * @author Pablo Leon Alcaide

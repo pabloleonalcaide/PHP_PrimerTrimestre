@@ -14,7 +14,7 @@ $query = $usuarios->get_novalidados();
 ob_end_flush();
 ?>
 <h2>Validación de Usuarios</h2>
-<?
+<?php
 mostrarAgentes($query);
 function mostrarAgentes($query){
     if(count($query)==0){

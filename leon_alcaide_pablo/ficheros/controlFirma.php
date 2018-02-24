@@ -20,7 +20,6 @@ echo'<form action="./controlFirma.php" method="post">
 ?>
 <br><hr><b>Pruebas: </b> número : 2017
 
-<!-- Volver a la raiz -->
 <br /><a href="../index.php">Volver</a>
 
 <?php
@@ -35,7 +34,5 @@ if($_POST['clave'] == $numSecreto){
     $id=$_SESSION['idActual'];
     header('Location: ./firmarDocumentos.php?id='.$_POST['hidden'].'');
 }
-
-
 ob_end_flush();
 ?>

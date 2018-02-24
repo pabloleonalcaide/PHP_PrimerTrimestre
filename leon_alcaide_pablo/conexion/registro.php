@@ -1,4 +1,4 @@
-<?
+<?php
 /**
 * @author pablo leon alcaide
 * Registro de los usuarios no almacenados en la base de datos
@@ -7,7 +7,6 @@ session_start();
 ob_start();
 include ('Usuarios.php');
 $usuarios = new Usuarios();
-
 
 if (!isset($_SESSION['usuario'])) {
     $_SESSION['usuario'] = "";
@@ -33,7 +32,6 @@ echo '<form action="'.htmlspecialchars($_SERVER["PHP_SELF"]).'" method="post">';
     </form>
 
 <?php
-//Cuando pulse para validar agente
     if(isset($_POST['validar'])){
         $user = limpiar($_POST['usuario']);
         $name = limpiar($_POST['nombre']);

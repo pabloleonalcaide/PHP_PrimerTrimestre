@@ -10,12 +10,11 @@ $documentos = new Documentos();
 $query = $documentos->get_pendientes($id);
 ?>
 <h2>Firma de ficheros</h2>
-<?
+<?php
 mostrarDocumentos($query);
 function mostrarDocumentos($query){
     if(count($query)==0){
         echo "<p>No hay ficheros por firmar</p>";
-
     }else{
         echo '<form action="./firmarDocumentos.php" method="post">
         <table><thead><tr><th>Documento</th><th>Estado</th><th>Fecha</th><th>Accion</th></thead>';
@@ -28,7 +27,6 @@ function mostrarDocumentos($query){
         }
         echo '</table><br><br><input type="submit" name="validar" value=Validar></form>';
         }
-
 }
 if(isset($_POST['validar'])){
     foreach($_POST['select'] as $selected){

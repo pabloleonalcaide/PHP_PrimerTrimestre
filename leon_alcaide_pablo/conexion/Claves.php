@@ -60,5 +60,4 @@ class Firmas extends conexion{
     }
 
 }
-
  ?>

@@ -69,7 +69,6 @@ function generarClaves($claves,$id){
     fclose($archivo);
 }
 
-
 ob_end_flush()
 ?>
 <a href="../index.php">Volver</a>

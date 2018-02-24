@@ -27,7 +27,7 @@ class Documentos extends conexion{
         $sentencia->closeCursor();
         return $resultado;
     }
-/* INserta un fichero */
+/* Inserta un fichero */
     public function insertarFichero($idUsuario,$descripcion,$fichero,$fechaFirma){
         $consulta = $this->conexion_db->prepare("INSERT INTO documentos (idUsuario,
             descripcion,fichero,estado, fechaFirma )
@@ -47,5 +47,4 @@ class Documentos extends conexion{
         return false;
     }
 }
-
  ?>
