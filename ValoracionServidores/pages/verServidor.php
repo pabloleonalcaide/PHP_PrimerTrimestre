@@ -7,7 +7,7 @@ require('../Clases/Servidor.php');
 ?>
 <?php
 if($_SESSION['perfil'] == "invitado" || !isset($_SESSION['perfil'])){
-  header('Location: ../index.php');
+  header('Location: ../indexValoraciones.php');
 }
 ?>
 <head>

@@ -54,7 +54,7 @@ if (!$error) {
     $id = $usuarios->getId($usuario)[0]['id'];
     if($id != null){
       $servidor->insertarServidor($id,$url);
-      header("Location:../index.php");
+      header("Location:../indexValoraciones.php");
     }else{
       $msgError ="No se pudo agregar servidor";
     }
