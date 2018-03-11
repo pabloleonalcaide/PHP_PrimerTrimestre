@@ -1,0 +1,62 @@
+body{
+  background-color: #3F51B5;
+}
+h1,h2{
+  text-align: center;
+  color: #C5CAE9;
+  background-color: #303F9F;
+}
+
+a{
+  color: #FF5722;
+  text-decoration: none;
+}
+a:hover{
+  color: #C5CAE9;
+}
+#loginForm, #formRegistro{
+  background-color: #303F9F;
+  padding: 10px;
+  text-align: center;
+  width: 30%;
+  margin: 0 auto;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+#formRegistro{
+  text-align: right;
+}
+#formRegistro input{
+  margin-top: 5px;
+}
+#opciones{
+  list-style: none;
+  display: grid;
+  grid-template-columns: 15% 15% 15%;
+  justify-content: space-around;
+}
+#opciones li{
+  border: 1px solid #303F9F;
+  text-align:center;
+  padding: 30px;
+  color: #303F9F;
+  background-color: #303F9F;
+}
+#opciones li a{
+
+}
+#volver{
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #C5CAE9;
+}
+#volver:hover{
+  color: #C5CAE9;
+  background-color: #FF5722;
+}
+.card{
+  background-color: #C5CAE9;
+  padding: 10px;
+  width: 40%;
+  margin: 0 auto;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
